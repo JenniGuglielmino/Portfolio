@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Proyectos";
+}
+@Model List<Portfolio.Dto.ProjectDto>
+    ;
+
+    @if (Model[0].Id == -1)
+    {
+        <div class="text-white">@Model[0].Title: @Model[0].Description</div>
+    }
+    else
+    {
+        <div class="info-text">Esta vista parcial se realiza consumiendo una API y de forma dinamica se muestran los Dto obtenidos</div>
+        <div class="projects-container">
+
+            @foreach (var item in Model)
+            {
+                <div class="item-project">
+                    <div class="text-white">@item.Title</div>
+                    <div class="text-white">@item.Description</div>
+                    @if (item.Base64Image != null) { 
+                        <img class="imagen-project" src="@item.Base64Image"/>
+                    }
+                </div>
+            }
+        </div>
+    }
