@@ -11,6 +11,7 @@ namespace Portfolio.ApiClient
     {
         public static HttpClient Get()
         {
+            // var client = new HttpClient { BaseAddress = new Uri("https://apijenniferguglielmino.azurewebsites.net/api/") };
             var client = new HttpClient { BaseAddress = new Uri("https://localhost:44388/api/") };
             //client.DefaultRequestHeaders.Add("ApiKey", "Clave123");
             return client;

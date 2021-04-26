@@ -12,23 +12,23 @@
 </head>
 <body>
     <header>
-            <div class="menu-bar">
-                    <a href="#" class="btn-menu"><i class="fas fa-ellipsis-h"></i></a>
-            </div>
-            <ul class="nav-porfolio">
-                <li class="nav-item-porfolio">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
-                </li>
-                <li class="nav-item-porfolio">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Skills">Skills</a>
-                </li>
-                <li class="nav-item-porfolio">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Index">Proyectos</a>
-                </li>
-                <li class="nav-item-porfolio">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
-                </li>
-            </ul>
+        <div class="menu-bar">
+            <a href="#" class="btn-menu"><i class="fas fa-ellipsis-h"></i></a>
+        </div>
+        <ul class="nav-porfolio">
+            <li class="nav-item-porfolio">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+            </li>
+            <li class="nav-item-porfolio">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Skills">Skills</a>
+            </li>
+            <li class="nav-item-porfolio">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Project" asp-action="Index">Proyectos</a>
+            </li>
+            <li class="nav-item-porfolio">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
+            </li>
+        </ul>
     </header>
     <div class="contenedores">
         <main role="main">
@@ -37,12 +37,11 @@
     </div>
 
     <footer class="">
-        
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -23,10 +23,16 @@ namespace Portfolio.App.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Skills()
         {
             return View();
         }
+
+        public IActionResult Contacto()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
