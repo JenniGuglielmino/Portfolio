@@ -1,8 +1,9 @@
-@{
-    ViewData["Title"] = "Proyectos";
-}
-@Model List<Portfolio.Dto.ProjectDto>
-    ;
+@model List<Portfolio.Dto.ProjectDto>
+
+    @{
+        ViewData["Title"] = "Proyectos";
+    }
+
 
     @if (Model[0].Id == -1)
     {
@@ -10,18 +11,30 @@
     }
     else
     {
-        <div class="info-text">Esta vista parcial se realiza consumiendo una API y de forma dinamica se muestran los Dto obtenidos</div>
-        <div class="projects-container">
+<div style="padding: 60px 20px 40px 20px;">
+    <div class="info-text">Esta vista parcial se realiza consumiendo una API y de forma dinamica se muestran los Dto obtenidos</div>
+    <div class="projects-container">
 
-            @foreach (var item in Model)
+        @foreach (var item in Model)
+        {
+        <div class="item-project">
+            <div class="text-white"><h5>@item.Title</h5></div>
+            @if (item.Base64Image != null)
             {
-                <div class="item-project">
-                    <div class="text-white">@item.Title</div>
-                    <div class="text-white">@item.Description</div>
-                    @if (item.Base64Image != null) { 
-                        <img class="imagen-project" src="@item.Base64Image"/>
-                    }
-                </div>
+                <img class="imagen-project" src="@item.Base64Image" />
+            }
+            <div class="text-white">@Html.Raw(item.Description)</div>
+            @if (item.Link != null && item.LinkTitle != null)
+            {
+                <br/><div class="text-white"><a class="btn-link-projects" href="@item.Link">@item.LinkTitle</a></div>
             }
         </div>
+        }
+    </div>
+    <div class="parallax-container-small">
+        <ul id="scene">
+            <li class="layer" data-depth="1"><img src="~/img/fondo.png" /></li>
+        </ul>
+    </div>
+</div>
     }

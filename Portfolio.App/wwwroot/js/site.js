@@ -8,6 +8,7 @@ function main(){
     var scene = document.getElementById('scene');
     var parallaxInstance = new Parallax(scene);
     parallaxInstance.clipRelativeInput = true;
-    parallaxInstance.limitX = 100;
+    parallaxInstance.limitX = 70;
     parallaxInstance.limitY = 10;
+
 }

@@ -9,5 +9,6 @@ namespace Portfolio.Dto
         public string Description { get; set; }
         public string Base64Image { get; set; }
         public string Link { get; set; }
+        public string LinkTitle { get; set; }
     }
 }

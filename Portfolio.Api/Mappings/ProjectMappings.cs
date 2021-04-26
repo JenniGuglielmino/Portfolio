@@ -28,6 +28,9 @@ namespace Porfolio.Api.Mappings
                 Id = data.Id,
                 Title = data.Title,
                 Description = data.Description,
+                Base64Image = data.Base64Image,
+                Link = data.Link,
+                LinkTitle = data.LinkTitle
             };
         }
 
@@ -38,6 +41,9 @@ namespace Porfolio.Api.Mappings
                 Id = data.Id,
                 Title = data.Title,
                 Description = data.Description,
+                Base64Image = data.Base64Image,
+                Link = data.Link,
+                LinkTitle = data.LinkTitle
             };
         }
 
@@ -46,7 +52,9 @@ namespace Porfolio.Api.Mappings
             originalData.Id = newData.Id;
             originalData.Title = newData.Title;
             originalData.Description = newData.Description;
-
+            originalData.Base64Image = newData.Base64Image;
+            originalData.Link = newData.Link;
+            originalData.LinkTitle = newData.LinkTitle;
         }
     }
 }
